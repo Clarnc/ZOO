@@ -1,6 +1,7 @@
 ﻿using SampleHierarchies.Data.Mammals;
 using SampleHierarchies.Enums;
 using SampleHierarchies.Interfaces.Services;
+using SampleHierarchies.Services;
 
 namespace SampleHierarchies.Gui;
 
@@ -14,15 +15,17 @@ public sealed class DogsScreen : Screen
     /// <summary>
     /// Data service.
     /// </summary>
+    string screenDefinitionJson = "DogsScreenDefinition.json";
     private IDataService _dataService;
-
+    private SettingsService _settingsService;
     /// <summary>
     /// Ctor.
     /// </summary>
     /// <param name="dataService">Data service reference</param>
-    public DogsScreen(IDataService dataService)
+    public DogsScreen(IDataService dataService,SettingsService settingsService)
     {
         _dataService = dataService;
+        _settingsService = settingsService;
     }
 
     #endregion Properties And Ctor
@@ -32,53 +35,78 @@ public sealed class DogsScreen : Screen
     /// <inheritdoc/>
     public override void Show()
     {
+        screenDefinition = ScreenDefinitionService.Load(screenDefinitionJson);
         while (true)
         {
-            Console.WriteLine();
-            Console.WriteLine("Your available choices are:");
-            Console.WriteLine("0. Exit");
-            Console.WriteLine("1. List all dogs");
-            Console.WriteLine("2. Create a new dog");
-            Console.WriteLine("3. Delete existing dog");
-            Console.WriteLine("4. Modify existing dog");
-            Console.Write("Please enter your choice: ");
+            history.Add("Dogs");
+        _settingsService.ApplySettings(_settingsService.GetCallingClassName());
+            int consolChoice = 0;
+            bool flag = false;
+            while (!flag)
+            {
+                HistoryShow();
+                WriteAllCustomLines(consolChoice);
+                ConsoleKeyInfo keyInfo = Console.ReadKey();
+                Console.BackgroundColor = ConsoleColor.Black;
 
-            string? choiceAsString = Console.ReadLine();
+
+                switch (keyInfo.Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        if (consolChoice == 0) consolChoice = 4; else consolChoice--;
+                        Console.Clear();
+                        
+                        break;
+                    case ConsoleKey.DownArrow:
+                        if (consolChoice == 4) consolChoice = 0; else consolChoice++;
+                        Console.Clear();
+                        
+                        
+                        break;
+                    case ConsoleKey.Enter:
+                        flag = true;
+                        
+                        break;
+                }
+
+            }
 
             // Validate choice
             try
             {
-                if (choiceAsString is null)
-                {
-                    throw new ArgumentNullException(nameof(choiceAsString));
-                }
+                
 
-                DogsScreenChoices choice = (DogsScreenChoices)Int32.Parse(choiceAsString);
+                DogsScreenChoices choice = (DogsScreenChoices)consolChoice;
                 switch (choice)
                 {
                     case DogsScreenChoices.List:
+                        Console.Clear();
                         ListDogs();
                         break;
 
                     case DogsScreenChoices.Create:
+                        Console.Clear();
                         AddDog(); break;
 
-                    case DogsScreenChoices.Delete: 
+                    case DogsScreenChoices.Delete:
+                        Console.Clear();
                         DeleteDog();
                         break;
 
                     case DogsScreenChoices.Modify:
+                        Console.Clear();
                         EditDogMain();
                         break;
 
                     case DogsScreenChoices.Exit:
-                        Console.WriteLine("Going back to parent menu.");
+                        Console.Clear();
+                        history.RemoveAt(history.Count - 1);
                         return;
                 }
             }
             catch
             {
-                Console.WriteLine("Invalid choice. Try again.");
+                WriteCustomLine(10);
             }
         }
     }
@@ -96,7 +124,7 @@ public sealed class DogsScreen : Screen
         if (_dataService?.Animals?.Mammals?.Dogs is not null &&
             _dataService.Animals.Mammals.Dogs.Count > 0)
         {
-            Console.WriteLine("Here's a list of dogs:");
+            WriteCustomLine(11);
             int i = 1;
             foreach (Dog dog in _dataService.Animals.Mammals.Dogs)
             {
@@ -107,7 +135,7 @@ public sealed class DogsScreen : Screen
         }
         else
         {
-            Console.WriteLine("The list of dogs is empty.");
+            WriteCustomLine(12);
         }
     }
 
@@ -124,7 +152,7 @@ public sealed class DogsScreen : Screen
         }
         catch
         {
-            Console.WriteLine("Invalid input.");
+            WriteCustomLine(13);
         }
     }
 
@@ -135,7 +163,7 @@ public sealed class DogsScreen : Screen
     {
         try
         {
-            Console.Write("What is the name of the dog you want to delete? ");
+            WriteCustomLine(14);
             string? name = Console.ReadLine();
             if (name is null)
             {
@@ -150,12 +178,12 @@ public sealed class DogsScreen : Screen
             }
             else
             {
-                Console.WriteLine("Dog not found.");
+                WriteCustomLine(15);
             }
         }
         catch
         {
-            Console.WriteLine("Invalid input.");
+            WriteCustomLine(13);
         }
     }
 
@@ -166,7 +194,7 @@ public sealed class DogsScreen : Screen
     {
         try
         {
-            Console.Write("What is the name of the dog you want to edit? ");
+            WriteCustomLine(16);
             string? name = Console.ReadLine();
             if (name is null)
             {
@@ -178,17 +206,17 @@ public sealed class DogsScreen : Screen
             {
                 Dog dogEdited = AddEditDog();
                 dog.Copy(dogEdited);
-                Console.Write("Dog after edit:");
+                WriteCustomLine(17);
                 dog.Display();
             }
             else
             {
-                Console.WriteLine("Dog not found.");
+                WriteCustomLine(15);
             }
         }
         catch
         {
-            Console.WriteLine("Invalid input. Try again.");
+            WriteCustomLine(0);
         }
     }
 
@@ -198,11 +226,11 @@ public sealed class DogsScreen : Screen
     /// <exception cref="ArgumentNullException"></exception>
     private Dog AddEditDog()
     {
-        Console.Write("What name of the dog? ");
+        WriteCustomLine(18);
         string? name = Console.ReadLine();
-        Console.Write("What is the dog's age? ");
+        WriteCustomLine(19);
         string? ageAsString = Console.ReadLine();
-        Console.Write("What is the dog's breed? ");
+        WriteCustomLine(20);
         string? breed = Console.ReadLine();
 
         if (name is null)
@@ -222,6 +250,16 @@ public sealed class DogsScreen : Screen
 
         return dog;
     }
-
+    private void WriteAllCustomLines(int consolChoice)
+    {
+        WriteCustomLine(1);
+        bool[] balls = new bool[5];
+        balls[consolChoice] = true;
+        for (int i = 0; i < balls.Length; i++)
+        {
+            if (!balls[i]) WriteCustomLine(i + 2);
+            else WriteHighLightedCustomLine(i + 2);
+        }
+    }
     #endregion // Private Methods
 }

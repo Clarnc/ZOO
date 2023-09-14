@@ -1,0 +1,44 @@
+{
+  "lineEntries": [
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Your available choices are:"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "0. Exit"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "1. Screen's settings"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "2. Save settings"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Please enter your choice: "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Something went wrong"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Going back to parent menu."
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Invalid choice. Try again."
+    }
+  ]
+}

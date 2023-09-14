@@ -13,6 +13,9 @@ public interface IMammals
     /// Dogs collection.
     /// </summary>
     List<IDog> Dogs { get; set; }
+    List<IAfricanElephant> AfricanElephants { get; set; }
+    List<IPolarBear> PolarBears { get; set; }
+    List<IChimpanzee> Chimpanzees { get; set; }
 
     #endregion // Interface Members
 }

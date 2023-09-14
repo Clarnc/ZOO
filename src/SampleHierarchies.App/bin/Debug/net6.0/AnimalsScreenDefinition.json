@@ -1,0 +1,64 @@
+{
+  "lineEntries": [
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Your available choices are:"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "0. Exit"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "1. Mammals"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "2. Save to file"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "3. Read from file"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Please enter your choice: "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Going back to parent menu."
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Invalid choice. Try again."
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Save data to file: "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Data saving was not successful."
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Read data from file: "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Data reading from was not successful."
+    }
+  ]
+}

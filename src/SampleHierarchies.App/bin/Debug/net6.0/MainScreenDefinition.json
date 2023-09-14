@@ -1,0 +1,39 @@
+{
+  "lineEntries": [
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Your available choices are:"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "0. Exit"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "1. Animals"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "Cyan",
+      "text": "2. Settings"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Please enter your choice: "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Goodbye."
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Invalid choice. Try again."
+    }
+  ]
+}

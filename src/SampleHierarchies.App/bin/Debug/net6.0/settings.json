@@ -1,0 +1,42 @@
+{
+  "AnimalsScreen": {
+    "Version": null,
+    "BackgroundColor": "Black",
+    "ForegroundColor": "White"
+  },
+  "DogsScreen": {
+    "Version": null,
+    "BackgroundColor": "Black",
+    "ForegroundColor": "White"
+  },
+  "MainScreen": {
+    "Version": null,
+    "BackgroundColor": "Black",
+    "ForegroundColor": "White"
+  },
+  "MammalsScreen": {
+    "Version": null,
+    "BackgroundColor": "Black",
+    "ForegroundColor": "White"
+  },
+  "SettingsScreen": {
+    "Version": null,
+    "BackgroundColor": "Black",
+    "ForegroundColor": "Red"
+  },
+  "AfricanElephantScreen": {
+    "Version": null,
+    "BackgroundColor": "DarkYellow",
+    "ForegroundColor": "Yellow"
+  },
+  "ChimpanzeeScreen": {
+    "Version": null,
+    "BackgroundColor": "Black",
+    "ForegroundColor": "White"
+  },
+  "PolarBearScreen": {
+    "Version": null,
+    "BackgroundColor": "Black",
+    "ForegroundColor": "White"
+  }
+}

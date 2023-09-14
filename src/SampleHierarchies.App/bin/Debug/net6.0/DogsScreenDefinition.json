@@ -1,0 +1,104 @@
+{
+  "lineEntries": [
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Your available choices are:"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "0. Exit"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "1. List all Dogs"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "2. Create a new Dog"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "3. Delete existing Dog"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "4. Modify existing Dog"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Please enter your choice: "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Something went wrong"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Going back to parent menu."
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Invalid choice. Try again."
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Here's a list of Dogs:"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "The list of Dogs is empty."
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Invalid input."
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "What is the name of the Dog you want to delete? "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Dog not found."
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "What is the name of the Dog you want to edit? "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Dog after edit:"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "What name of the Dog? "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "What is the Dog's age? "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "What is the Dog's breed? "
+    }
+  ]
+}

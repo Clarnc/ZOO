@@ -12,6 +12,9 @@ public class Mammals : IMammals
 
     /// <inheritdoc/>
     public List<IDog> Dogs { get; set; }
+    public List<IAfricanElephant> AfricanElephants { get; set; }
+    public List<IPolarBear> PolarBears { get; set; }
+    public List<IChimpanzee> Chimpanzees { get; set; }
 
     #endregion // IMammals Implementation
 
@@ -23,7 +26,9 @@ public class Mammals : IMammals
     public Mammals()
     {
         Dogs = new List<IDog>();
+        AfricanElephants = new List<IAfricanElephant>();
+        PolarBears = new List<IPolarBear>();
+        Chimpanzees = new List<IChimpanzee>();
     }
-
     #endregion // Ctors
 }

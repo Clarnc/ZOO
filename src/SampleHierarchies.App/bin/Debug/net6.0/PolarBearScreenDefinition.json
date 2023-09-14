@@ -1,0 +1,124 @@
+{
+  "lineEntries": [
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Your available choices are:"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "0. Exit"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "1. List all Polar Bears"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "2. Create a new Polar Bear"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "3. Delete existing Polar Bear"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "4. Modify existing Polar Bear"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Please enter your choice: "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Something went wrong"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Going back to parent menu."
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Invalid choice. Try again."
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Here's a list of Polar Bears:"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "The list of Polar Bears is empty."
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Invalid input."
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "What is the name of the Polar Bear you want to delete? "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Polar Bear not found."
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "What is the name of the Polar Bear you want to edit? "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Polar Bear after edit:"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "What name of the Polar Bear? "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "What is the Polar Bear's age? "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "What is the Polar Bear's fur coat? "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "What is the Polar Bear's paws? "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "What is the Polar Bear's diet? "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Is the Polar Bear semi-aquatic? true/false: "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "What is the Polar Bear's sense of smell? "
+    }
+  ]
+}

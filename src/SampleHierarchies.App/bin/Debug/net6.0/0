@@ -1,0 +1,25 @@
+{
+	"Mammals":	{
+		"Dogs":	[
+			
+		],
+		"AfricanElephants":	[
+			{
+				"height":	123.0,
+				"weight":	23.0,
+				"tuskLength":	45.0,
+				"lifespan":	68,
+				"socialBehavior":	"None",
+				"Species":	2,
+				"Name":	"qw",
+				"Age":	1
+			}
+		],
+		"PolarBears":	[
+			
+		],
+		"Chimpanzees":	[
+			
+		]
+	}
+}

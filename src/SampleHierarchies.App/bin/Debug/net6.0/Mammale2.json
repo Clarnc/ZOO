@@ -1,0 +1,25 @@
+{
+	"Mammals":	{
+		"Dogs":	[
+			
+		],
+		"AfricanElephants":	[
+			
+		],
+		"PolarBears":	[
+			{
+				"furCoat":	"ad",
+				"paws":	"sd",
+				"carnivorousDiet":	"ads",
+				"semiAquatic":	false,
+				"senceOfSmell":	"aedf",
+				"Species":	3,
+				"Name":	"sd",
+				"Age":	12
+			}
+		],
+		"Chimpanzees":	[
+			
+		]
+	}
+}

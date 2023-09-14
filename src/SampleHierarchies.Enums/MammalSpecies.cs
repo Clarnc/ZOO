@@ -8,6 +8,10 @@ public enum MammalSpecies
     None = 0,
     [Description("Simple description of a dog")]
     Dog = 1,
-    [Description("Simple description of a cat")]
-    Cat = 2,
+    [Description("Simple description of a African Elephant")]
+    AfricanElephant = 2,
+    [Description("Simple description of a Polar Bear")]
+    PolarBear = 3,
+    [Description("Simple description of a Chimpanzee")]
+    Chimpanzee = 4,
 }

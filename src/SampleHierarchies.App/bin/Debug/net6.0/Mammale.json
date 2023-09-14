@@ -1,0 +1,48 @@
+{
+	"Mammals":	{
+		"Dogs":	[
+			{
+				"Breed":	"asfd",
+				"Species":	1,
+				"Name":	"sdc",
+				"Age":	1
+			}
+		],
+		"AfricanElephants":	[
+			{
+				"height":	2.0,
+				"weight":	2.0,
+				"tuskLength":	2.0,
+				"lifespan":	2,
+				"socialBehavior":	"dfg",
+				"Species":	2,
+				"Name":	"gf",
+				"Age":	2
+			}
+		],
+		"PolarBears":	[
+			{
+				"furCoat":	"ad",
+				"paws":	"sd",
+				"carnivorousDiet":	"ads",
+				"semiAquatic":	false,
+				"senceOfSmell":	"aedf",
+				"Species":	3,
+				"Name":	"sd",
+				"Age":	12
+			}
+		],
+		"Chimpanzees":	[
+			{
+				"opposableThumbs":	true,
+				"socialBehavior":	"sf",
+				"toolUse":	true,
+				"intelligence":	-2,
+				"diet":	"df",
+				"Species":	4,
+				"Name":	"vd",
+				"Age":	2
+			}
+		]
+	}
+}

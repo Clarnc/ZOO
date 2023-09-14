@@ -1,0 +1,55 @@
+{
+  "lineEntries": [
+    {
+      "backgroundColor": "Red",
+      "foregroundColor": "White",
+      "text": "Your available choices are:"
+    },
+    {
+      "backgroundColor": "DarkYellow",
+      "foregroundColor": "White",
+      "text": "0. Exit"
+    },
+    {
+      "backgroundColor": "Yellow",
+      "foregroundColor": "White",
+      "text": "1. Dogs"
+    },
+    {
+      "backgroundColor": "Green",
+      "foregroundColor": "Yellow",
+      "text": "2. AfricanElephants"
+    },
+    {
+      "backgroundColor": "DarkCyan",
+      "foregroundColor": "White",
+      "text": "3. PolarBears"
+    },
+    {
+      "backgroundColor": "DarkBlue",
+      "foregroundColor": "White",
+      "text": "4. Chimpanzees"
+    },
+    
+    {
+      "backgroundColor": "DarkMagenta",
+      "foregroundColor": "White",
+      "text": "Please enter your choice: "
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Something went wrong"
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Going back to parent menu."
+    },
+    {
+      "backgroundColor": "Black",
+      "foregroundColor": "White",
+      "text": "Invalid choice. Try again."
+    }
+  ]
+}

@@ -9,8 +9,12 @@ public interface ISettings
 
     /// <summary>
     /// Version of settings.
+    /// Console background color   
+    /// Console foreground color
     /// </summary>
-    string Version { get; set; }
+    public string? Version { get; set; }
+    public string? BackgroundColor { get; set; }
+    public string? ForegroundColor { get; set; }
 
     #endregion // Interface Members
 }

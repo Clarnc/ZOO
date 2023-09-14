@@ -1,5 +1,6 @@
 ﻿using SampleHierarchies.Enums;
 using SampleHierarchies.Interfaces.Services;
+using SampleHierarchies.Services;
 
 namespace SampleHierarchies.Gui;
 
@@ -10,6 +11,8 @@ public sealed class AnimalsScreen : Screen
 {
     #region Properties And Ctor
 
+
+    string screenDefinitionJson = "AnimalsScreenDefinition.json";
     /// <summary>
     /// Data service.
     /// </summary>
@@ -20,6 +23,8 @@ public sealed class AnimalsScreen : Screen
     /// </summary>
     private MammalsScreen _mammalsScreen;
 
+    private SettingsService _settingsService;
+
     /// <summary>
     /// Ctor.
     /// </summary>
@@ -27,10 +32,13 @@ public sealed class AnimalsScreen : Screen
     /// <param name="animalsScreen">Animals screen</param>
     public AnimalsScreen(
         IDataService dataService,
-        MammalsScreen mammalsScreen)
+        MammalsScreen mammalsScreen,
+        SettingsService settingsService
+        )
     {
         _dataService = dataService;
         _mammalsScreen = mammalsScreen;
+        _settingsService = settingsService;
     }
 
     #endregion Properties And Ctor
@@ -42,47 +50,71 @@ public sealed class AnimalsScreen : Screen
     {
         while (true)
         {
-            Console.WriteLine();
-            Console.WriteLine("Your available choices are:");
-            Console.WriteLine("0. Exit");
-            Console.WriteLine("1. Mammals");
-            Console.WriteLine("2. Save to file");
-            Console.WriteLine("3. Read from file");
-            Console.Write("Please enter your choice: ");
+            history.Add("Animals");
+            screenDefinition = ScreenDefinitionService.Load(screenDefinitionJson);
+            _settingsService.ApplySettings(_settingsService.GetCallingClassName());
+            int consolChoice = 0;
+            bool flag = false;
+            while (!flag)
+            {
+                HistoryShow();
+                WriteAllCustomLines(consolChoice);
+                ConsoleKeyInfo keyInfo = Console.ReadKey();
+                Console.BackgroundColor = ConsoleColor.Black;
 
-            string? choiceAsString = Console.ReadLine();
+
+                switch (keyInfo.Key)
+                {
+
+                    case ConsoleKey.UpArrow:
+                        if (consolChoice == 0) consolChoice = 3; else consolChoice--;
+                        Console.Clear();
+                        
+                        break;
+                    case ConsoleKey.DownArrow:
+                        if (consolChoice == 3) consolChoice = 0; else consolChoice++;
+                        Console.Clear();
+                        break;
+                    case ConsoleKey.Enter:
+                       
+                        flag = true;
+                        break;
+                }
+
+            }
 
             // Validate choice
             try
             {
-                if (choiceAsString is null)
-                {
-                    throw new ArgumentNullException(nameof(choiceAsString));
-                }
+               
 
-                AnimalsScreenChoices choice = (AnimalsScreenChoices)Int32.Parse(choiceAsString);
+                AnimalsScreenChoices choice = (AnimalsScreenChoices)consolChoice;
                 switch (choice)
                 {
                     case AnimalsScreenChoices.Mammals:
+                        Console.Clear();
                         _mammalsScreen.Show();
                         break;
 
                     case AnimalsScreenChoices.Read:
+                        Console.Clear();
                         ReadFromFile();
                         break;
 
                     case AnimalsScreenChoices.Save:
+                        Console.Clear();
                         SaveToFile();
                         break;
 
                     case AnimalsScreenChoices.Exit:
-                        Console.WriteLine("Going back to parent menu.");
+                        Console.Clear();
+                        history.RemoveAt(history.Count - 1);
                         return;
                 }
             }
             catch
             {
-                Console.WriteLine("Invalid choice. Try again.");
+                WriteCustomLine(8);
             }
         }
     }
@@ -98,7 +130,7 @@ public sealed class AnimalsScreen : Screen
     {
         try
         {
-            Console.Write("Save data to file: ");
+            WriteCustomLine(9);
             var fileName = Console.ReadLine();
             if (fileName is null)
             {
@@ -109,7 +141,7 @@ public sealed class AnimalsScreen : Screen
         }
         catch
         {
-            Console.WriteLine("Data saving was not successful.");
+            WriteCustomLine(10);
         }
     }
 
@@ -120,20 +152,30 @@ public sealed class AnimalsScreen : Screen
     {
         try
         {
-            Console.Write("Read data from file: ");
+            WriteCustomLine(11);
             var fileName = Console.ReadLine();
             if (fileName is null)
             {
                 throw new ArgumentNullException(nameof(fileName));
             }
-            _dataService.Write(fileName);
+            _dataService.Read(fileName);
             Console.WriteLine("Data reading from: '{0}' was successful.", fileName);
         }
         catch
         {
-            Console.WriteLine("Data reading from was not successful.");
+            WriteCustomLine(12);
         }
     }
-
+    private void WriteAllCustomLines(int consolChoice)
+    {
+        WriteCustomLine(1);
+        bool[] balls = new bool[4];
+        balls[consolChoice] = true;
+        for (int i = 0; i < 4; i++)
+        {
+            if (!balls[i]) WriteCustomLine(i + 2);
+            else WriteHighLightedCustomLine(i + 2);
+        }
+    }
     #endregion // Private Methods
 }

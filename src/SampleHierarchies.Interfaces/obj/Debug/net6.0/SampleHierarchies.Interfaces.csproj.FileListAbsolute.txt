@@ -1,0 +1,15 @@
+C:\Users\38066\source\repos\ProgrammingObjectOriented2\src\SampleHierarchies.Interfaces\bin\Debug\net6.0\SampleHierarchies.Interfaces.deps.json
+C:\Users\38066\source\repos\ProgrammingObjectOriented2\src\SampleHierarchies.Interfaces\bin\Debug\net6.0\SampleHierarchies.Interfaces.dll
+C:\Users\38066\source\repos\ProgrammingObjectOriented2\src\SampleHierarchies.Interfaces\bin\Debug\net6.0\SampleHierarchies.Interfaces.pdb
+C:\Users\38066\source\repos\ProgrammingObjectOriented2\src\SampleHierarchies.Interfaces\bin\Debug\net6.0\SampleHierarchies.Enums.dll
+C:\Users\38066\source\repos\ProgrammingObjectOriented2\src\SampleHierarchies.Interfaces\bin\Debug\net6.0\SampleHierarchies.Enums.pdb
+C:\Users\38066\source\repos\ProgrammingObjectOriented2\src\SampleHierarchies.Interfaces\obj\Debug\net6.0\SampleHierarchies.Interfaces.csproj.AssemblyReference.cache
+C:\Users\38066\source\repos\ProgrammingObjectOriented2\src\SampleHierarchies.Interfaces\obj\Debug\net6.0\SampleHierarchies.Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\38066\source\repos\ProgrammingObjectOriented2\src\SampleHierarchies.Interfaces\obj\Debug\net6.0\SampleHierarchies.Interfaces.AssemblyInfoInputs.cache
+C:\Users\38066\source\repos\ProgrammingObjectOriented2\src\SampleHierarchies.Interfaces\obj\Debug\net6.0\SampleHierarchies.Interfaces.AssemblyInfo.cs
+C:\Users\38066\source\repos\ProgrammingObjectOriented2\src\SampleHierarchies.Interfaces\obj\Debug\net6.0\SampleHierarchies.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\38066\source\repos\ProgrammingObjectOriented2\src\SampleHierarchies.Interfaces\obj\Debug\net6.0\SampleHierarchies.Interfaces.csproj.CopyComplete
+C:\Users\38066\source\repos\ProgrammingObjectOriented2\src\SampleHierarchies.Interfaces\obj\Debug\net6.0\SampleHierarchies.Interfaces.dll
+C:\Users\38066\source\repos\ProgrammingObjectOriented2\src\SampleHierarchies.Interfaces\obj\Debug\net6.0\refint\SampleHierarchies.Interfaces.dll
+C:\Users\38066\source\repos\ProgrammingObjectOriented2\src\SampleHierarchies.Interfaces\obj\Debug\net6.0\SampleHierarchies.Interfaces.pdb
+C:\Users\38066\source\repos\ProgrammingObjectOriented2\src\SampleHierarchies.Interfaces\obj\Debug\net6.0\ref\SampleHierarchies.Interfaces.dll
